@@ -5,15 +5,15 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Temples.WebAPI", "TempleWeb\Temples.WebAPI.csproj", "{849F9AFD-328D-4965-8709-52D1911EA9B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temples.Mapper", "Temple.Mapper\Temples.Mapper.csproj", "{38DB03D3-A654-4107-BB7B-CD1BDC1EA0F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Temples.ViewMapper", "Temple.Mapper\Temples.ViewMapper.csproj", "{38DB03D3-A654-4107-BB7B-CD1BDC1EA0F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temples.Services", "Temple.Services\Temples.Services.csproj", "{3FEE223E-72E5-4A15-A63A-EF6B09A1728E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Temples.Services", "Temple.Services\Temples.Services.csproj", "{3FEE223E-72E5-4A15-A63A-EF6B09A1728E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temples.Repository", "Temple.Repository\Temples.Repository.csproj", "{393B7B95-C2E8-44F7-98A7-201E45CC0D50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Temples.Repository", "Temple.Repository\Temples.Repository.csproj", "{393B7B95-C2E8-44F7-98A7-201E45CC0D50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temples.DataEntities", "Temple.DataEntities\Temples.DataEntities.csproj", "{A20D8905-1C53-4DBC-BDAE-EBD58D44B82B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Temples.DataEntities", "Temple.DataEntities\Temples.DataEntities.csproj", "{A20D8905-1C53-4DBC-BDAE-EBD58D44B82B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temples.CommonUtility", "Temple.CommonUtility\Temples.CommonUtility.csproj", "{EEF33F23-ABDE-4BF8-8399-5A631D84381C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Temples.CommonUtility", "Temple.CommonUtility\Temples.CommonUtility.csproj", "{EEF33F23-ABDE-4BF8-8399-5A631D84381C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

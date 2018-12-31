@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Temple.DataEntities\Temples.DataEntities.csproj" />
+    <ProjectReference Include="..\Temple.Repository\Temples.Repository.csproj" />
+  </ItemGroup>
+
 </Project>

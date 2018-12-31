@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Temples.DataEntities.Models;
 
-namespace Temples.Mapper.ModelEntities
+namespace Temples.ViewMapper.ModelEntities
 {
-    public class TempleEntity
+    public class TempleViewModel
     {        
         public int ID { get; set; }
      

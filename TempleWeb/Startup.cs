@@ -14,10 +14,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Temples.Mapper;
 using Temples.Repository.DataContext;
 using Temples.Repository.Interface;
 using Temples.Repository.Repositories;
+using Temples.Services;
+using Temples.Services.Interfaces;
+using Temples.ViewMapper;
 
 namespace TempleWeb
 {
@@ -50,20 +52,23 @@ namespace TempleWeb
                  .AddDefaultTokenProviders();
 
             //google auth
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
+            //services.Configure<CookiePolicyOptions>(options =>
+            //{
+            //    options.CheckConsentNeeded = context => true;
+            //    options.MinimumSameSitePolicy = SameSiteMode.None;
+            //});
 
-            services.AddAuthentication().AddGoogle(googleOptions =>
-            {
-                googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
-                googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
-            });
+            //services.AddAuthentication().AddGoogle(googleOptions =>
+            //{
+            //    googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
+            //    googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+            //});
 
 
             //Add DI for transient objects
+            services.AddTransient<ITempleService, TempleService>();
+            services.AddTransient<IMapper, Mapper>();
+
             services.AddTransient<ITempleRepository, TempleRepository>();
             services.AddTransient<ITempleTypeRepository, TempleTypeRepository>();
             services.AddTransient<ITempleBlobRepository, TempleBlobRepository>();
@@ -98,9 +103,10 @@ namespace TempleWeb
             {
                 app.UseHsts();
             }
+            app.UseHttpsRedirection();
             app.UseAuthentication();
             app.UseStaticFiles();
-            app.UseHttpsRedirection();
+           
             app.UseMvc();
         }
     }

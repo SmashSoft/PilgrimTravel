@@ -15,8 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Temple.Mapper\Temples.Mapper.csproj" />
+    <ProjectReference Include="..\Temple.Mapper\Temples.ViewMapper.csproj" />
     <ProjectReference Include="..\Temple.Repository\Temples.Repository.csproj" />
+    <ProjectReference Include="..\Temple.Services\Temples.Services.csproj" />
   </ItemGroup>
 
 </Project>
